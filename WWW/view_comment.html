@@ -966,12 +966,13 @@
         <div class="comment-text">
             <textarea class="commentInp" placeholder="댓글 작성" row="1"></textarea>
         </div>
-        <div class="comment-add-controll">
+        <div class="comment-add-controll" aria-expanded="false">
             <button class="btn btn-sm btn-primary" disabled id="submitBtn"><span>등록</span></button>
         </div>
         <script type="text/javascript">
           let commentInp = document.querySelector(".commentInp");
           let submitBtn = document.querySelector("#submitBtn");
+          let controller = document.querySelector('.comment-add-controll');
           commentInp.addEventListener("input", function(e){
               let value = commentInp.value;
               var rows = value.split(/\r\n|\r|\n/).length;
@@ -982,6 +983,13 @@
                // 입력값 유효성 체크
                value ? submitBtn.removeAttribute('disabled'):submitBtn.setAttribute('disabled', 'disabled');
           });
+
+          commentInp.onfocus = function(e) {
+              controller.setAttribute('aria-expanded', true);
+          };
+          commentInp.onblur = function(e) {
+              if(!e.target.value) controller.setAttribute('aria-expanded', false);
+          };
         </script>
     </div>
     <script>
