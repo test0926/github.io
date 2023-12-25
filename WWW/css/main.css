@@ -2322,6 +2322,7 @@ header .recent-box .clear-all {
   .comment-text { padding: 20px 16px 14px; }
   .comment-text textarea { font-size: 15px; font-weight: 500; line-height: 22px; color: #1A1A1A; width: 100%; height: 24px; }
   .comment-text textarea:placeholder { color: #868A8C; }
+  .comment-add-controll[aria-expanded="false"] { display: none; }
   .comment-add-controll { border-top: 1px solid #E3E5E8; padding: 8px 16px; display: flex; justify-content: flex-end; align-items: center; }
   .comment-add-controll .btn { flex-grow: 0; flex-shrink: 0; gap: 8px; }
 
