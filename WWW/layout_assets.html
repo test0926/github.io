@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+        <title>theVN｜다양한 커뮤니티, 세상의 모든 즐거움</title>
+        <!--jquery-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <!--swiper-->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+        />
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <!--font-->
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css"/>
+
+        <script src="js/bottomSheet.js"></script>
+        <script src="js/common.js"></script>
+        <!--css-->
+        <link rel="stylesheet" href="css/reset.css" />
+        <link rel="stylesheet" href="css/main.css" />
+        <link rel="stylesheet" href="css/sub.css" />
+        <link rel="stylesheet" href="css/mob.css" />
+    </head>
+    <body>
+        <!--header-->
+        <header class="header header-ver4">
+            <div class="header-bar">
+                <div class="inner">
+                    <div class="back-btn">
+                        <a href="#">
+                            <i class="icon ic-back"></i>
+                        </a>
+                    </div>
+                    <h1 class="header-tit">assets</h1>
+                    <ul class="etc-btn"></ul>
+                </div>
+            </div>
+        </header>
+
+        <!--content-->
+        <style type="text/css">
+            .column { display: flex; justify-content: flex-start; align-items: stretch; flex-direction: column; }
+            .column .row { flex-shrink: ; margin-bottom: 20px; }
+            .column .row h1 { font-size: 16px; font-weight: 700; margin-bottom: 8px; }
+            .column .row h2 { font-size: 14px; font-weight: 700; margin-bottom: 5px; }
+            .column .col { display: flex; justify-content: flex-start; align-items: flex-start; flex-wrap: wrap; gap: 8px; }
+            .column .col-row { display: flex; justify-content: flex-start; align-items: stretch; flex-direction: column; gap: 8px; }
+            .col-row + .col-row { margin-top: 8px; }
+            .col > .icon { font-size: 12px; }
+            .class { color: #0ac900; }
+            .icon-list { display: flex; justify-content: flex-start; align-items: flex-start; flex-wrap: wrap; padding: 12px; border: 1px solid #ddd; border-radius: 4px; background: #f1f1f1; gap: 8px; }
+            .icon-list .icon { font-size: 20px; }
+            .ml-auto { margin-left: auto; margin-right: 0; }
+            .mt-auto { margin-top: auto; margin-bottom: 0; }
+            .mt05 { margin-top: 5px; }
+            .mt10 { margin-top: 10px; }
+            .mt15 { margin-top: 15px; }
+            .mt20 { margin-top: 20px; }
+            .mt25 { margin-top: 25px; }
+            .mt30 { margin-top: 30px; }
+            .mt35 { margin-top: 35px; }
+
+
+            .field-area { position: relative; }
+            .field-area:focus-within {  }
+            .field-area:focus-within .field-label { color: var(--color-primary); }
+            .field-label {  }
+            .field-input {  }
+            ol li { list-style: auto; margin-left: 12px; }
+            ol li + li { margin-top: 5px; line-height: 1.5em; }
+            .guide { background: #eee; border: 1px solid #ddd; border-radius: 4px; padding: 12px; margin-bottom: 10px; font-size: 12px; }
+            .danger { background: #ffd9d9; border: 1px solid #ffa2a2; border-radius: 4px; padding: 12px; margin-bottom: 10px; font-size: 12px; }
+        </style>
+        <div class="content-wrap content-wrap4">
+            <div class="column inner">
+                <!-- icon -->
+                <div class="row">
+                    <h1>아이콘</h1>
+                    <div class="guide">
+                        <ol>
+                            <li>아이콘은 fontawesome 과 비슷한 형태입니다.</li>
+                            <li>아이콘 크기는 폰트사이즈에 비례합니다.</li>
+                            <li>아이콘의 class는 img/icon/파일명 과 동일합니다.</li>
+                        </ol>
+                    </div>
+                    <div class="danger">
+                        <ol>
+                            <li>누락된 아이콘이 있는 경우 전달해주세요.</li>
+                        </ol>
+                    </div>
+                    <div class="icon-list">
+                        <i class="icon ic-add"></i>
+                        <i class="icon ic-alert"></i>
+                        <i class="icon ic-alert2"></i>
+                        <i class="icon ic-arrow"></i>
+                        <i class="icon ic-arrow-right"></i>
+                        <i class="icon ic-anchor-right-w"></i>
+                        <i class="icon ic-anchor-right-g"></i>
+                        <i class="icon ic-back"></i>
+                        <i class="icon ic-best"></i>
+                        <i class="icon ic-best-b"></i>
+                        <i class="icon ic-bookmark"></i>
+                        <i class="icon ic-calendar"></i>
+                        <i class="icon ic-caution"></i>
+                        <i class="icon ic-chart"></i>
+                        <i class="icon ic-chat"></i>
+                        <i class="icon ic-check"></i>
+                        <i class="icon ic-check2"></i>
+                        <i class="icon ic-classic"></i>
+                        <i class="icon ic-close"></i>
+                        <i class="icon ic-close2"></i>
+                        <i class="icon ic-close3"></i>
+                        <i class="icon ic-close4"></i>
+                        <i class="icon ic-close-w"></i>
+                        <i class="icon ic-close5"></i>
+                        <i class="icon ic-comment"></i>
+                        <i class="icon ic-comment-b"></i>
+                        <i class="icon ic-comment2"></i>
+                        <i class="icon ic-community"></i>
+                        <i class="icon ic-community2"></i>
+                        <i class="icon ic-compact"></i>
+                        <i class="icon ic-connect"></i>
+                        <i class="icon ic-connect-b"></i>
+                        <i class="icon ic-delete"></i>
+                        <i class="icon ic-dice"></i>
+                        <i class="icon ic-down"></i>
+                        <i class="icon ic-downvote"></i>
+                        <i class="icon ic-edit"></i>
+                        <i class="icon ic-error"></i>
+                        <i class="icon ic-etc"></i>
+                        <i class="icon ic-etc2"></i>
+                        <i class="icon ic-eye"></i>
+                        <i class="icon ic-eye2"></i>
+                        <i class="icon ic-eye3"></i>
+                        <i class="icon ic-floating"></i>
+                        <i class="icon ic-facebook"></i>
+                        <i class="icon ic-google"></i>
+                        <i class="icon ic-hidden"></i>
+                        <i class="icon ic-hit"></i>
+                        <i class="icon ic-hit2"></i>
+                        <i class="icon ic-hit3"></i>
+                        <i class="icon ic-hit3-b"></i>
+                        <i class="icon ic-home"></i>
+                        <i class="icon ic-home2"></i>
+                        <i class="icon ic-hot"></i>
+                        <i class="icon ic-img"></i>
+                        <i class="icon ic-lightning"></i>
+                        <i class="icon ic-list"></i>
+                        <i class="icon ic-list2"></i>
+                        <i class="icon ic-lock"></i>
+                        <i class="icon ic-message"></i>
+                        <i class="icon ic-message2"></i>
+                        <i class="icon ic-my"></i>
+                        <i class="icon ic-my-lg"></i>
+                        <i class="icon ic-news"></i>
+                        <i class="icon ic-news2"></i>
+                        <i class="icon ic-next"></i>
+                        <i class="icon ic-pag"></i>
+                        <i class="icon ic-pag-left"></i>
+                        <i class="icon ic-pag-left2"></i>
+                        <i class="icon ic-pag-right"></i>
+                        <i class="icon ic-pag-right2"></i>
+                        <i class="icon ic-picture"></i>
+                        <i class="icon ic-plus"></i>
+                        <i class="icon ic-prev"></i>
+                        <i class="icon ic-reload"></i>
+                        <i class="icon ic-refresh"></i>
+                        <i class="icon ic-refresh-b"></i>
+                        <i class="icon ic-refresh2"></i>
+                        <i class="icon ic-report"></i>
+                        <i class="icon ic-scrap2"></i>
+                        <i class="icon ic-search"></i>
+                        <i class="icon ic-search2"></i>
+                        <i class="icon ic-search3"></i>
+                        <i class="icon ic-search4"></i>
+                        <i class="icon ic-setting"></i>
+                        <i class="icon ic-share"></i>
+                        <i class="icon ic-share2"></i>
+                        <i class="icon ic-speech"></i>
+                        <i class="icon ic-speech2"></i>
+                        <i class="icon ic-survey"></i>
+                        <i class="icon ic-under"></i>
+                        <i class="icon ic-upload"></i>
+                        <i class="icon ic-upload2"></i>
+                        <i class="icon ic-upvote"></i>
+                        <i class="icon ic-used"></i>
+                        <i class="icon ic-used2"></i>
+                        <i class="icon ic-video"></i>
+                        <i class="icon ic-write"></i>
+                        <i class="icon ic-youtube"></i>
+                        <i class="icon ic-youtube2"></i>
+                        <i class="icon ic-zalo"></i>
+                        <i class="icon ic-sort-card"></i>
+                        <i class="icon ic-sort-classic"></i>
+                        <i class="icon ic-sort-compact"></i>
+                        <i class="icon ic-block-from"></i>
+                        <i class="icon ic-block-to"></i>
+                    </div>
+                </div>
+                <!-- icon // -->
+
+                <!-- buttons -->
+                <div class="row">
+                    <h1>버튼</h1>
+                    <div class="guide">
+                        <ol>
+                            <li>버튼은 기본적으로 활성화상태입니다.</li>
+                            <li>버튼은 css 속성 또는 diabled 속성에 의해 상태가 결정됩니다.</li>
+                            <li>
+                                버튼을 비활성화 하기 위해서는<br>
+                                "&lt;button class="disabled&gt;" 또는<br> 
+                                "&lt;button disabled&gt;" 를 추가하십시오.
+                            </li>
+                        </ol>
+                    </div>
+                    <div class="danger">
+                        <ol>
+                            <li>disabled 상태일때는 클라이언트의 상효작용이 불가능합니다.</li>
+                            <li>버튼 외부의 크기에 따라 버튼의 크기가 변경됩니다.</li>
+                        </ol>
+                    </div>
+                    <div class="row">
+                        <div class="col-row">
+                            <div class="btn-area">
+                                <button class="btn"><span>기본</span></button>
+                            </div>
+                            <div class="btn-area">
+                                <button class="btn" disabled><span>비활성</span></button>
+                            </div>
+                            <div class="btn-area">
+                                <button class="btn disabled"><span>비활성</span></button>
+                            </div>
+                        </div>
+                        <div class="col-row">
+                            <button class="btn btn-white"><span>white</span></button>
+                            <button class="btn btn-secondary"><span>secondary</span></button>
+                        </div>
+                        <div class="col-row">
+                            <button class="btn btn-primary"><span>primary</span></button>
+                            <button class="btn btn-special"><span>special</span></button>
+                        </div>
+                        <div class="col-row">
+                            <button class="btn btn-special-i"><span>아이콘 버튼</span></button>
+                            <button class="btn btn-special-i disabled"><span>아이콘 버튼 비활성</span></button>
+                        </div>
+                         <div class="col-row">
+                            <button class="btn-rd"><span>기본</span></button>
+                            <button class="btn-rd" disabled><span>하이퍼 비활성</span></button>
+                            <button class="btn-rd disabled"><span>클래스 비활성</span></button>
+                        </div>
+                        <div class="col-row">
+                            <button class="btn-rd btn-rd-primary"><span>primary</span></button>
+                            <button class="btn-rd btn-rd-line"><span>outLine</span></button>
+                            <button class="btn-rd btn-rd-secondary"><span>secondary</span></button>
+                        </div>
+                        <div class="col-row">
+                           <a href="" class="btn-paging">
+                               <span class="current">더보기 1</span>
+                               <span class="total">/100</span>
+                           </a>
+                        </div>                            
+                    </div>
+                </div>
+                <!-- buttons // -->
+
+                <!-- checkbox -->
+                <div class="row">
+                    <h1>check</h1>
+                    <div class="guide">
+                        <ol>
+                            <li>체크박스 기본적으로 비활성화 상태입니다.</li>
+                            <li>체크박스 checked 속성에 의해 상태가 결정됩니다.</li>
+                            <li>
+                                체크박스 활성화 하기 위해서는 체크박스를 클릭하거나<br>
+                                "&lt;input type="checkbox" checked&gt;" 또는<br> 
+                                "&lt;input type="radio" checked&gt;"<br> 
+                            </li>
+                            <li>단일선택은 type="radio"</li>
+                        </ol>
+                    </div>
+                    <div class="danger">
+                        <ol>
+                            <li>disabled 상태일때는 클라이언트의 상효작용이 불가능합니다.</li>
+                            <li>단일선택은 type="radio" name="group name"</li>
+                            <li>복수선택은 type="checkbox"</li>
+                        </ol>
+                    </div>
+                    <div class="row">
+                        <div class="row">
+                            <div class="checkbox check-type-01">
+                                <input type="checkbox" name="">
+                                <label>체크박스</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="checkbox check-type-02">
+                                <input type="checkbox" name="">
+                                <label>체크박스</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="checkbox check-type-03">
+                                <input type="checkbox" name="">
+                                <label>체크박스</label>
+                            </div>
+                        </div>
+                         <div class="row">
+                            <div class="switchbox">
+                                <input type="checkbox" name="">
+                                <label><!-- 스위치 --></label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- checkbox -->
+            </div>
+        </div>
+    </body>
+</html>

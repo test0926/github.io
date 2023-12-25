@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+		<title>theVN｜다양한 커뮤니티, 세상의 모든 즐거움</title>
+		<!--jquery-->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<!--swiper-->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+		/>
+		<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+		<!-- bottom sheet -->
+		<script src="js/bottomSheet.js"></script>
+		<script src="js/scrolling.js"></script>
+		<!--font-->
+		<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css"/>
+		<!--css-->
+	    <link rel="stylesheet" href="css/reset.css" />
+	    <link rel="stylesheet" href="css/main.css" />
+	    <link rel="stylesheet" href="css/sub.css" />
+	    <link rel="stylesheet" href="css/mob.css" />
+	</head>
+	<body>
+		<!--form controller -->
+		<div class="content-controller-container header">
+			<div class="content-controll">
+				<a class="cancel" href="#cancel">취소</a>
+				<button type="" class="btn-rd btn-rd-primary" disabled id="submitBtn">게시하기</button>				
+			</div>
+		</div>
+
+		<!--content-->
+		<div class="content-wrap content-wrap-flex">
+			<!-- head title -->
+			<div class="content-head">
+				<div class="content-head-tit">카메라/캠코더</div>
+			</div>
+
+			<!-- field  content -->
+			<div class="content-body">
+				<div class="select-field">
+					<input type="text" class="vaild-field selectable-input" data-select-type="category" placeholder="제품 분류" readonly/>
+				</div>
+				<div class="input-field">
+					<input type="" name="" placeholder="제목을 입력해주세요." class="vaild-field clearable-input">
+					<div class="field-control">
+						<div class="field-btn clear-btn" aria-expanded="false"><i class="icon ic-close3"></i></div>
+					</div>
+				</div>
+				<div class="input-field">
+					<input type="" name="" placeholder="판매 가격을 입력하세요." class="vaild-field clearable-input">
+					<div class="field-control">
+						<div class="field-btn clear-btn" aria-expanded="false"><i class="icon ic-close3"></i></div>
+					</div>
+				</div>
+				<div class="select-field">
+					<input type="text" class="vaild-field selectable-input" data-select-type="goods" placeholder="상품 상태 선택" readonly/>
+				</div>
+				<div class="select-field">
+					<input type="text" class="vaild-field selectable-input" data-select-type="area" placeholder="거래 지역 선택" readonly/>
+				</div>
+
+				<!-- bottom sheets able -->
+				<ul class="edit-upload-controller scroll-trigger">
+					<li>
+						<a href="javascript:openModal('modal1');" class="upload-control"><i class="icon ic-img"></i> 이미지</a>
+					</li>
+					<li>
+						<a href="javascript:openModal('modal2');" class="upload-control"><i class="icon ic-video"></i> 동영상</a>
+					</li>
+					<li>
+						<a href="javascript:openModal('modal3');" class="upload-control"><i class="icon ic-youtube2"></i> 유튜브</a>
+					</li>
+					<li>
+						<a href="javascript:openModal('modal4');" class="upload-control"><i class="icon ic-survey"></i> 설문</a>
+					</li>
+				</ul>
+				<div class="editor-container">
+					<textarea placeholder="내용을 입력하세요" class="vaild-field"></textarea>
+				</div>
+			</div>
+		</div>
+
+		<!-- 분류 bottom sheet -->
+        <div class="bottomSheet-container" aria-hidden="true" id="category-sheet">
+            <div class="overlay"></div>
+            <div class="bottomSheet">
+                <div class="bs_head">
+                    <div class="bs_dragable"></div>
+                </div>
+                <div class="bs_content">
+                	<div class="selector-wrap" data-select-type="goods">
+                		<ul class="selector-list">
+                			<li class="selector-group">
+	                    		<div class="select-tit">제품 분류</div>
+	                    		<ul class="select-option">
+	                    			<li class="option">분류 1</span></li>
+	                    			<li class="option">분류 2</span></li>
+	                    		</ul>
+	                    	</li>
+	                    	<li class="selector-group">
+	                    		<div class="select-tit">제품 분류</div>
+	                    		<ul class="select-option">
+	                    			<li class="option">분류 1</span></li>
+	                    			<li class="option">분류 2</span></li>
+	                    		</ul>
+	                    	</li>
+                		</ul>
+                	</div>
+                </div>
+            </div>
+        </div>
+
+		<!-- 상품 bottom sheet -->
+        <div class="bottomSheet-container" aria-hidden="true" id="goods-sheet">
+            <div class="overlay"></div>
+            <div class="bottomSheet">
+                <div class="bs_head">
+                    <div class="bs_dragable"></div>
+                </div>
+                <div class="bs_content">
+                	<div class="selector-wrap" data-select-type="goods">
+                		<ul class="selector-list">
+                			<li class="selector-group">
+	                    		<div class="select-tit">상품 상태</div>
+	                    		<ul class="select-option">
+	                    			<li class="option">상태 1</span></li>
+	                    			<li class="option">상태 2</span></li>
+	                    		</ul>
+	                    	</li>
+	                    	<li class="selector-group">
+	                    		<div class="select-tit">상품 상태</div>
+	                    		<ul class="select-option">
+	                    			<li class="option">상태 1</span></li>
+	                    			<li class="option">상태 2</span></li>
+	                    		</ul>
+	                    	</li>
+                		</ul>
+                	</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 지역 bottom sheet -->
+        <div class="bottomSheet-container" aria-hidden="true" id="area-sheet">
+            <div class="overlay"></div>
+            <div class="bottomSheet">
+                <div class="bs_head">
+                    <div class="bs_dragable"></div>
+                </div>
+                <div class="bs_content">
+                	<div class="selector-wrap" data-select-type="area">
+                		<ul class="selector-list">
+                			<li class="selector-group">
+	                    		<div class="select-tit">거래 지역</div>
+	                    		<ul class="select-option">
+	                    			<li class="option">지역 1</span></li>
+	                    			<li class="option">지역 2</span></li>
+	                    		</ul>
+	                    	</li>
+                		</ul>
+                	</div>
+                </div>
+            </div>
+        </div>
+
+		<script type="text/javascript">
+        	let valid_inp = document.querySelectorAll('.vaild-field'); // valid inputs 
+			let submitBtn = document.querySelector('#submitBtn'); // submit button
+
+			// 유효성 검사
+	        function _valid(e){
+	        	let valid = true;
+	        	valid_inp.forEach(function (target, index) {
+		            if(valid){
+		            	valid = target.value ? true:false; 
+		            } else {
+		            	return false;
+		            }
+		        });
+
+		        if(valid){
+            		submitBtn.removeAttribute('disabled'); // 버튼 활성화
+            	} else {
+            		submitBtn.setAttribute('disabled', 'disabled');  // 버튼 활성화
+            	}
+	        }
+
+	        // bind event
+	        valid_inp.forEach(function (target, index) {
+	            target.addEventListener("input", _valid);
+	        });
+
+	        // bottomZheet
+	        let category_Sheet = new bottomSheetJS('#category-sheet');
+	        let goods_Sheet = new bottomSheetJS('#goods-sheet');
+	        let area_Sheet = new bottomSheetJS('#area-sheet');
+
+			 //selectable = bottom sheet open
+	        const selector = document.querySelectorAll('.selectable-input');
+	        let select_type;
+	        selector.forEach(function (target, index) {
+	            target.addEventListener("click", function (e) {
+	            	select_type = target.dataset.selectType;
+	            	if(select_type == 'category'){
+	            		category_Sheet.open();
+	            	} else	if(select_type == 'goods'){
+	            		goods_Sheet.open();
+	            	} else if(select_type == 'area') {
+			    		area_Sheet.open();
+	            	}
+		        });
+		    });
+
+		    function setValue(value){
+		    	selector.forEach(function (target, index) {
+		            if(select_type == target.dataset.selectType){
+		            	target.value = value;
+		            	alert('selected value' +' '+  select_type +' '+ value);
+		            }
+			    });
+		    }
+	       
+	        // bottom sheet option
+	        const selectorOption = document.querySelectorAll('.select-option .option');
+	        selectorOption.forEach(function (target, index) {
+	            target.addEventListener("click", function (e) {
+	                value = target.innerText;
+
+	                if(select_type == 'category'){
+	            		category_Sheet.close();
+	            	} else	if(select_type == 'goods'){
+	            		goods_Sheet.close();
+	            	} else if(select_type == 'area') {
+			    		area_Sheet.close();
+	            	}
+	               	setValue(value);
+	                _valid(e);
+	            });
+	        });
+
+			 //input clear
+			const inputFields = document.querySelectorAll(".clearable-input");
+			const clearButtons = document.querySelectorAll(".clear-btn");
+
+			inputFields.forEach(function (inputField, index) {
+				const clearButton = clearButtons[index];
+				// clear value
+				clearButton.addEventListener("click", function (e) {
+					inputField.value = "";
+					clearButton.setAttribute("aria-expanded", false);
+					_valid(e);
+				});
+
+				// clear btn show, hide
+				inputField.addEventListener("input", function (e) {
+					if (inputField.value !== "") {
+						clearButton.setAttribute("aria-expanded", true);
+					} else {
+						clearButton.setAttribute("aria-expanded", false);
+					}
+				});
+			});
+
+		</script>
+	</body>
+</html>

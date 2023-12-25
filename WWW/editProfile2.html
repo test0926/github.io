@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
+    <title>theVN｜다양한 커뮤니티, 세상의 모든 즐거움</title>
+    <!--jquery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!--swiper-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!--font-->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css"
+    />
+    <!--css-->
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/sub.css" />
+    <link rel="stylesheet" href="css/mob.css" />
+  </head>
+  <body>
+    <!--header-->
+    <header class="header header-ver4">
+      <div class="header-bar">
+        <div class="inner">
+          <div class="back-btn">
+            <a href="#">
+              <img src="img/icon/ic-back.svg" alt="back icon" />
+            </a>
+          </div>
+          <h1 class="header-tit"></h1>
+          <ul class="etc-btn"></ul>
+        </div>
+      </div>
+    </header>
+    <!--content-->
+    <div class="content-wrap content-wrap2">
+      <div class="edit-wrap">
+        <div class="inner">
+          <div class="edit-tit">
+            <h3>Edit Profile</h3>
+            <p>Edit profile image and nickname.</p>
+          </div>
+          <div class="profile-box">
+            <div class="cir">
+              <img src="img/sub/edit-profile.png" alt="profile img" />
+            </div>
+            <a href="" class="setting-btn">
+              <i class="icon ic-setting"></i>
+            </a>
+          </div>
+          <div class="edit-input">
+            <!--  
+                코멘트 작성  id="commnetCheck" checked = commnet-field show 
+                코멘트 - commnetInp disabled 
+            -->
+            <div class="comment-area">
+                <input type="checkbox" name="" hidden id="commnetCheck" checked>
+                <label class="comment-add-btn" for="commnetCheck">
+                  <i class="icon ic-add"></i>
+                  <span>자기 소개 글 추가</span>
+                </label>
+                <div class="commnet-field">
+                    <div class="commnet-box">
+                      <textarea placeholder="이 닉네임이 자신을 소개하는 글을 여기에 여기 설명 공간에 넣습니다. 개인 소개글입니다." maxlength="200" id="commnetInp" disabled>클라이언트가 등록한 코멘트가 표시됩니다.</textarea>
+                      <div class="bit"><span class="current">0</span> / 200</div>
+                    </div>
+                    <div class="btn-area">
+                       <div class="btn-rd saveBtn hide">저장</div>
+                       <div class="btn-rd modifyBtn">수정</div>
+                       <label class="btn-rd" for="commnetCheck">취소</label>
+                    </div>
+                </div>
+            </div>
+            <!-- 코멘트 작성 // -->
+            <div class="edit-box">
+              <div class="input-wrap basic-input">
+                <p class="input-tit">Nickname</p>
+                <div class="input-box">
+                  <div class="input-width">
+                    <input type="text" value="Hong1234" readonly />
+                  </div>
+                  <button class="show-change-input">변경</button>
+                </div>
+              </div>
+              <div class="change-input">
+                <div>
+                  <div class="input-wrap input-wrap2 error">
+                    <p class="input-tit">New Nickname</p>
+                    <div class="input-box">
+                      <div class="input-width">
+                        <input type="text" placeholder="새로운 닉네임 입력" />
+                      </div>
+                      <button>저장</button>
+                    </div>
+                    <p class="input-error">이미 사용중인 닉네임입니다.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="edit-box">
+              <div class="input-wrap basic-input">
+                <p class="input-tit">Password</p>
+                <div class="input-box">
+                  <div class="input-width input-width2">
+                    <input type="password" value="Hong1234" readonly />
+                    <i class="icon ic-eye3"></i>
+                  </div>
+                  <button class="show-change-input">변경</button>
+                </div>
+              </div>
+              <div class="change-input">
+                <div>
+                  <div class="input-wrap input-wrap3">
+                    <p class="input-tit">New Password</p>
+                    <div class="input-box">
+                      <div class="input-width input-width2">
+                        <input
+                          type="password"
+                          placeholder="새로운 비밀번호 입력"
+                        />
+                        <i class="icon ic-eye3"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="input-wrap input-wrap2">
+                    <p class="input-tit">Confirm Password</p>
+                    <div class="input-box">
+                      <div class="input-width input-width2">
+                        <input type="password" placeholder="비밀번호 재입력" />
+                        <i class="icon ic-eye3"></i>
+                      </div>
+                      <button>저장</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="edit-info">
+            <dl>
+              <dt>이메일</dt>
+              <dd>Hong1234@gmail.com</dd>
+            </dl>
+            <dl>
+              <dt>방문 횟수</dt>
+              <dd>235</dd>
+            </dl>
+            <dl>
+              <dt>가입일</dt>
+              <dd>22.12.29 13:40</dd>
+            </dl>
+          </div>
+          <div class="edit-btn">
+            <a href="#">탈퇴하기</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+
+      // textarea count
+      const commnetInp = document.querySelector('#commnetInp');
+      const count = document.querySelector('.commnet-field .current');
+      const modifyBtn = document.querySelector('.modifyBtn');
+      const saveBtn = document.querySelector('.saveBtn');
+
+      // 코멘트 입력
+      commnetInp.addEventListener('keyup', countText);
+      function countText(e){
+          leng = commnetInp.value.length;
+          if(leng > 200) count.innerHTML = 200;
+          else count.innerHTML = leng;
+      }
+      // 수정
+      modifyBtn.addEventListener('click', modifyText);
+      function modifyText(e){
+          countText();
+          commnetInp.disabled = false;
+          commnetInp.focus();
+          modifyBtn.classList.toggle('hide');
+          saveBtn.classList.toggle('hide');
+      }
+
+      // 저장
+      saveBtn.addEventListener('click', saveText);
+      function saveText(e){
+          commnetInp.disabled = true;
+          modifyBtn.classList.toggle('hide');
+          saveBtn.classList.toggle('hide');
+
+          // alert('ajax')
+      }
+
+      $(document).ready(function () {
+        // 'input-width2' 클래스를 가진 모든 요소의 하위에 있는 img 요소 클릭 시 이벤트 핸들러
+        $(".input-width2 .icon").click( function () {
+          // input 요소와 관련된 img 요소를 찾기
+          var inputField = $(this).prev("input");
+
+          console.log(inputField);
+
+          // input 요소의 타입 확인하여 변경
+          if (inputField.attr("type") === "password") {
+            // 패스워드 타입일 경우, 텍스트 타입으로 변경하고 이미지 교체
+            inputField.attr("type", "text");
+            $(this).addClass('ic-eye2');
+            $(this).removeClass('ic-eye3');
+          } else {
+            // 텍스트 타입일 경우, 패스워드 타입으로 변경하고 이미지 교체
+            inputField.attr("type", "password");
+            $(this).addClass('ic-eye3');
+            $(this).removeClass('ic-eye2');
+          }
+        });
+      });
+
+      $(document).ready(function () {
+        // "변경" 버튼 클릭 시
+        $(".show-change-input").click(function () {
+          // 클릭된 버튼이 속한 부모 요소의 다음 요소를 보여주고
+          // 클릭된 버튼이 속한 부모 요소는 숨김
+          $(this).closest(".edit-box").find(".basic-input").hide();
+          $(this).closest(".edit-box").find(".change-input").show();
+        });
+      });
+    </script>
+    <script src="js/common.js"></script>
+  </body>
+</html>

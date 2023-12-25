@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
+    <title>theVN｜다양한 커뮤니티, 세상의 모든 즐거움</title>
+    <!--jquery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!--swiper-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!--font-->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css"
+    />
+    <!--css-->
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/sub.css" />
+    <link rel="stylesheet" href="css/mob.css" />
+  </head>
+  <body>
+    <!--header-->
+    <header class="header header-ver4">
+      <div class="header-bar">
+        <div class="inner">
+          <div class="back-btn">
+            <a href="#">
+              <img src="img/icon/ic-back.svg" alt="back icon" />
+            </a>
+          </div>
+          <h1 class="header-tit">자동차</h1>
+          <ul class="etc-btn">
+            <li>
+              <a href="#">
+                <img src="img/icon/ic-search.svg" alt="search icon" />
+              </a>
+            </li>
+            <li class="my-page">
+              <span class="num">12</span>
+              <a href="#">
+                <img src="img/icon/ic-my.png" alt="mypage icon" />
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <!--content-->
+    <div class="content-wrap content-wrap2">
+      <!--used-cata-->
+      <div class="used-depth1">
+        <div class="inner">
+          <div class="depth1-list">
+            <select>
+              <option selected>전체</option>
+              <option>서울</option>
+              <option>경기</option>
+              <option>대구</option>
+              <option>부산</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <!--notice-wrap-->
+      <div class="wrap notice-wrap notice-wrap2">
+        <div class="inner">
+          <a href="#" class="notice-box">
+            <div class="txt-box">
+              <h3>중고거래 주의사항!</h3>
+              <p>사기거래를 피하기 위해 반드시 알아두어야하는 내용입니다.</p>
+            </div>
+            <img src="img/icon/ic-next.svg" alt="go btn" />
+          </a>
+        </div>
+      </div>
+      <!--board-wrap-->
+      <div class="wrap board-wrap">
+        <div class="board-bar used-bar">
+          <div class="inner">
+            <div class="board-left">
+              <select>
+                <option selected>판매중</option>
+                <option>판매완료</option>
+                <option>예약중</option>
+              </select>
+              <div class="search-wrap">
+                <input type="search" placeholder="Search" />
+              </div>
+            </div>
+            <div class="board-style">
+              <button class="style-label">
+                <img src="img/icon/ic-classic.svg" alt="classic icon" />
+              </button>
+              <ul class="style-list">
+                <li class="style-item">
+                  <img src="img/icon/ic-classic.svg" alt="classic icon" />
+                  Classic
+                </li>
+                <li class="style-item">
+                  <img src="img/icon/ic-compact.svg" alt="compact icon" />
+                  Compact
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="board-table board-table2">
+          <div class="tr nomal">
+            <a href="#">
+              <div class="info-box">
+                <div class="nomal-top">
+                  <div class="top-list">
+                    <div>
+                      <div class="nick">
+                        <span class="profile">
+                          <img src="img/icon/ic-my.png" alt="profile" />
+                        </span>
+                        <span class="nickname">더비엔닉네임</span>
+                      </div>
+                      <p class="time">0초 전</p>
+                    </div>
+                    <div class="more">
+                      <img
+                        class="more-icon"
+                        src="img/icon/ic-more.svg"
+                        alt="more icon"
+                      />
+                      <div class="report-btn">
+                        <img src="img/icon/ic-report.svg" alt="report icon" />
+                        신고하기
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tit">
+                    29일 방송된 tvN 토일 드라마
+                    <ul class="tit-icon">
+                      <li>
+                        <img src="img/icon/ic-picture.svg" alt="picture icon" />
+                      </li>
+                      <li>
+                        <img src="img/icon/ic-youtube.svg" alt="youtube icon" />
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="nomal-bottom">
+                  <div>
+                    <p class="state ing">판매중</p>
+                    <p class="price"><span>245,390,000</span>원</p>
+                  </div>
+                  <div>
+                    <p class="time time2">10분전</p>
+                    <p class="comment">
+                      <img src="img/icon/ic-comment.svg" alt="comment icon" />
+                      <span>3.3k</span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="img-box">
+                <div>
+                  <img
+                    src="img/main/board-thumbnail.png"
+                    alt="board-thumbnail"
+                  />
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="tr nomal">
+            <a href="#">
+              <div class="info-box">
+                <div class="nomal-top">
+                  <div class="top-list">
+                    <div>
+                      <div class="nick">
+                        <span class="profile">
+                          <img src="img/icon/ic-my.svg" alt="profile" />
+                        </span>
+                        <span class="nickname">더비엔닉네임</span>
+                      </div>
+                      <p class="time">10시간 전</p>
+                    </div>
+                    <div class="more">
+                      <img
+                        class="more-icon"
+                        src="img/icon/ic-more.svg"
+                        alt="more icon"
+                      />
+                      <div class="report-btn">
+                        <img src="img/icon/ic-report.svg" alt="report icon" />
+                        신고하기
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tit">
+                    Like a Vampire! Kelly Clarkson Flaunts Weight Loss in..
+                    <ul class="tit-icon">
+                      <li>
+                        <img src="img/icon/ic-picture.svg" alt="picture icon" />
+                      </li>
+                      <li>
+                        <img src="img/icon/ic-youtube.svg" alt="youtube icon" />
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="nomal-bottom">
+                  <div>
+                    <p class="state done">판매완료</p>
+                    <p class="price"><span>245,390,000</span>원</p>
+                  </div>
+                  <div>
+                    <p class="time time2">10분전</p>
+                    <p class="comment">
+                      <img src="img/icon/ic-comment.svg" alt="comment icon" />
+                      <span>3.3k</span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="img-box">
+                <div>
+                  <img
+                    src="img/main/board-thumbnail.png"
+                    alt="board-thumbnail"
+                  />
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="tr nomal">
+            <a href="#">
+              <div class="info-box">
+                <div class="nomal-top">
+                  <div class="top-list">
+                    <div>
+                      <div class="nick">
+                        <span class="profile">
+                          <img src="img/icon/ic-my.svg" alt="profile" />
+                        </span>
+                        <span class="nickname">더비엔닉네임</span>
+                      </div>
+                      <p class="time">10시간 전</p>
+                    </div>
+                    <div class="more">
+                      <img
+                        class="more-icon"
+                        src="img/icon/ic-more.svg"
+                        alt="more icon"
+                      />
+                      <div class="report-btn">
+                        <img src="img/icon/ic-report.svg" alt="report icon" />
+                        신고하기
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tit">
+                    Selena Gomez Under Attack By Fans For ‘Sickening’ Statement
+                    On Israel-Hamas
+                  </div>
+                </div>
+                <div class="nomal-bottom">
+                  <div>
+                    <p class="state reserv">예약중</p>
+                    <p class="price"><span>245,390,000</span>원</p>
+                  </div>
+                  <div>
+                    <p class="time time2">10분전</p>
+                    <p class="comment">
+                      <img src="img/icon/ic-comment.svg" alt="comment icon" />
+                      <span>3.3k</span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="img-box">
+                <div>
+                  <img
+                    src="img/main/board-thumbnail.png"
+                    alt="board-thumbnail"
+                  />
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="tr nomal">
+            <a href="#">
+              <div class="info-box">
+                <div class="nomal-top">
+                  <div class="top-list">
+                    <div>
+                      <div class="nick">
+                        <span class="profile">
+                          <img src="img/icon/ic-my.svg" alt="profile" />
+                        </span>
+                        <span class="nickname">더비엔닉네임</span>
+                      </div>
+                      <p class="time">0초 전</p>
+                    </div>
+                    <div class="more">
+                      <img
+                        class="more-icon"
+                        src="img/icon/ic-more.svg"
+                        alt="more icon"
+                      />
+                      <div class="report-btn">
+                        <img src="img/icon/ic-report.svg" alt="report icon" />
+                        신고하기
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tit">
+                    "Whistling past the graveyard": Judge scolds Trump lawyers
+                    for pushing "simply incorrect" claim.
+                  </div>
+                </div>
+                <div class="nomal-bottom">
+                  <div>
+                    <p class="state ing">판매중</p>
+                    <p class="price"><span>245,390,000</span>원</p>
+                  </div>
+                  <div>
+                    <p class="time time2">10분전</p>
+                    <p class="comment">
+                      <img src="img/icon/ic-comment.svg" alt="comment icon" />
+                      <span>3.3k</span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="img-box">
+                <div>
+                  <img
+                    src="img/main/board-thumbnail.png"
+                    alt="board-thumbnail"
+                  />
+                </div>
+              </div>
+            </a>
+          </div>
+          <a href="#" class="more-view"> 더보기 1<span>/200</span> </a>
+        </div>
+        <a href="#" class="write-btn">
+          <img src="img/icon/ic-write.svg" alt="write btn" />
+        </a>
+      </div>
+    </div>
+    <!--bottom-bar-->
+    <div class="bottom-bar">
+      <ul class="bottom-menu">
+        <li>
+          <a href="main.html">
+            <div class="img-box">
+              <img src="img/icon/ic-home.svg" alt="home icon" />
+              <img src="img/icon/ic-home2.svg" alt="home icon" />
+            </div>
+            홈
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <div class="img-box">
+              <img src="img/icon/ic-community.svg" alt="community icon" />
+              <img src="img/icon/ic-community2.svg" alt="community icon" />
+            </div>
+            커뮤니티
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <div class="img-box">
+              <img src="img/icon/ic-news.svg" alt="news icon" />
+              <img src="img/icon/ic-news2.svg" alt="news icon" />
+            </div>
+            뉴스
+          </a>
+        </li>
+        <li class="on">
+          <a href="#">
+            <div class="img-box">
+              <img src="img/icon/ic-used.svg" alt="used icon" />
+              <img src="img/icon/ic-used2.svg" alt="used icon" />
+            </div>
+            중고거래
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <div class="img-box">
+              <img src="img/icon/ic-dice.svg" alt="dice icon" />
+              <img src="img/icon/ic-dice2.svg" alt="dice icon" />
+            </div>
+            Xo so
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <script>
+      /*used-cata*/
+      document.addEventListener("DOMContentLoaded", function () {
+        const cataListItems = document.querySelectorAll(
+          ".used-depth2 .depth2-list li"
+        );
+        const usedCata3Lists = document.querySelectorAll(".used-depth3 ul");
+        cataListItems.forEach((li, index) => {
+          li.addEventListener("click", function () {
+            cataListItems.forEach((item) => {
+              item.classList.remove("on");
+            });
+
+            li.classList.add("on");
+
+            usedCata3Lists.forEach((ul) => {
+              ul.style.display = "none";
+            });
+
+            usedCata3Lists[index].style.display = "flex";
+          });
+        });
+      });
+    </script>
+    <script src="js/common.js"></script>
+  </body>
+</html>

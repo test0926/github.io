@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+        <title>theVN｜다양한 커뮤니티, 세상의 모든 즐거움</title>
+        <!--jquery-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <!--swiper-->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+        />
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <!--font-->
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css"/>
+
+        <!-- bottomsheet js -->
+        <script src="js/bottomSheet.js"></script>
+        <!--css-->
+        <link rel="stylesheet" href="css/reset.css" />
+        <link rel="stylesheet" href="css/main.css" />
+        <link rel="stylesheet" href="css/sub.css" />
+        <link rel="stylesheet" href="css/mob.css" />
+    </head>
+    <body>
+        <!--header-->
+        <header class="header header-ver4">
+            <div class="header-bar">
+                <div class="inner">
+                    <div class="back-btn">
+                        <a href="#">
+                            <i class="icon ic-close4"></i>
+                        </a>
+                    </div>
+                    <h1 class="header-tit"></h1>
+                    <ul class="etc-btn">
+                        <a href="" class="link-primary">로그인</a>
+                    </ul>
+                </div>
+            </div>
+        </header>
+
+        <!--content-->
+        <div class="content-wrap content-wrap3">
+            <div class="sign-container">
+                <div class="tab-con">
+                    <div class="inner">
+                        <h3 class="tab-tit">이메일로 가입</h3>
+                        <div class="input-wrap">
+                            <div class="input-box">
+                                <p class="input-tit">이메일</p>
+                                <input type="email" placeholder="이메일을 입력하세요" class="vaild-field">
+                            </div>
+                            <div class="input-box input-count">
+                                <p class="input-tit">Nickname</p>
+                                <input type="text" placeholder="닉네임을 입력하세요" maxlength="25" id="NickCount" class="vaild-field">
+                                <div class="bit"><span class="current" id="counter">0</span>/25</div>
+                            </div>
+                            <div class="input-box">
+                                <p class="input-tit">Password</p>
+                                <div class="pw-box">
+                                    <ul class="pw-icon">
+                                        <li class="show">
+                                            <i class="icon ic-eye3"></i>
+                                        </li>
+                                    </ul>
+                                    <input type="password" placeholder="비밀번호를 입력하세요" class="passwordInput vaild-fieldt">
+                                </div>
+                            </div>
+                            <div class="input-box">
+                                <p class="input-tit">Confirm password</p>
+                                <div class="pw-box">
+                                    <ul class="pw-icon">
+                                        <li class="show">
+                                            <i class="icon ic-eye3"></i>
+                                        </li>
+                                    </ul>
+                                    <input type="password" placeholder="비밀번호 확인" class="passwordInput vaild-field"/>
+                                </div>
+                            </div>
+                        </div>
+                         <div class="btn-area mt20">
+                            <button onClick="javascript:openModal('modal11');" class="btn btn-special" disabled id="submitBtn">
+                                가입하기
+                            </button>
+                        </div>
+                        <p class="agree">
+                            계정을 생성하면 plug의 <a href="#">개인정보정책</a> 및
+                            <a href="#">이용약관</a>에 동의하게 됩니다.
+                        </p>
+                        <div class="social-login">
+                            <p class="social-tit">
+                                <span>소셜 네트워크 계정</span>으로 가입
+                                <i class="icon ic-arrow"></i>
+                            </p>
+                            <ul class="singup-list singup-list-lg">
+                                <li><a href=""><i class="icon ic-facebook"></i><span>Facebook</span></a></li>
+                                <li><a href=""><i class="icon ic-google"></i><span>Google</span></a></li>
+                                <li><a href=""><i class="icon ic-zalo"></i><span>Zalo</span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script type="text/javascript">
+            // textarea count
+            const commnetInp = document.querySelector('#NickCount');
+            const counter = document.querySelector('#counter');
+            commnetInp.addEventListener('keyup', countText);
+
+            function countText(e){
+                max = parseInt(e.target.getAttribute('maxlength'));
+                leng = e.target.value.length;
+                counter.innerHTML = leng;
+                if(leng > max) counter.innerHTML = max;
+                else counter.innerHTML = leng;
+            }
+
+
+            // valid
+            let valid_inp = document.querySelectorAll('.vaild-field');
+            let submitBtn = document.querySelector('#submitBtn');
+
+            valid_inp.forEach(function (target, index) {
+                target.addEventListener("input", function (e) {    
+                    validCheck = _valid(); // 입력값 유효성 체크     
+                    if(validCheck){
+                        submitBtn.removeAttribute('disabled'); // 버튼 활성화
+                    } else {
+                        submitBtn.setAttribute('disabled', 'disabled');  // 버튼 활성화
+                    }
+                });
+            });
+
+            function _valid(e){
+                let valid = true;
+                valid_inp.forEach(function (target, index) {
+                    if(valid){
+                        valid = target.value ? true:false; 
+                    } else {
+                        return false;
+                    }
+                });
+                return valid;
+            }
+
+
+            $(document).ready(function () {
+                var pwIcon = $(".pw-icon");
+                var passwordInput = $(".passwordInput");
+
+                // Show pw-icon when input has content
+                passwordInput.on("input", function () {
+                  if ($(this).val().trim() !== "") {
+                    $(this).closest(".pw-box").find(".pw-icon").show();
+                  } else {
+                    $(this).closest(".pw-box").find(".pw-icon").hide();
+                  }
+                });
+
+                // Add focused class to input when it is focused
+                passwordInput.focus(function () {
+                  $(this).closest(".pw-box").addClass("focused");
+                });
+
+                // Remove focused class from input when it loses focus
+                passwordInput.blur(function () {
+                  $(this).closest(".pw-box").removeClass("focused");
+                });
+
+                // Show/Hide Password
+                $(".pw-icon .show").click(function () {
+                  var type = $(this)
+                    .closest(".pw-box")
+                    .find(".passwordInput")
+                    .attr("type");
+
+                  if (type === "password") {
+                    $(this)
+                      .closest(".pw-box")
+                      .find(".passwordInput")
+                      .attr("type", "text");
+                    $(this).find(".icon").addClass('ic-eye2');
+                    $(this).find(".icon").removeClass('ic-eye3');
+                  } else {
+                    $(this)
+                      .closest(".pw-box")
+                      .find(".passwordInput")
+                      .attr("type", "password");
+                    $(this).find(".icon").addClass('ic-eye3');
+                    $(this).find(".icon").removeClass('ic-eye2');
+                  }
+                });
+
+                // Delete Password
+                $(".pw-icon .delete").click(function () {
+                  $(this).closest(".pw-box").find(".passwordInput").val("");
+                  $(this).closest(".pw-box").find(".pw-icon").hide();
+                });
+              });
+
+              //input
+              $(document).ready(function () {
+                // 각 input-box에 대해 focus 이벤트와 blur 이벤트를 처리
+                $(".input-box input")
+                  .on("focus", function () {
+                    $(this).closest(".input-box").addClass("on");
+                  })
+                  .on("blur", function () {
+                    $(this).closest(".input-box").removeClass("on");
+                  });
+              });
+
+            //social-login
+              $(document).ready(function () {
+                $(".social-tit").click(function () {
+                  $(this).toggleClass("on").next(".singup-list").slideToggle();
+                });
+              });
+        </script>
+    </body>
+</html

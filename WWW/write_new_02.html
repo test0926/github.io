@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+		<title>theVN｜다양한 커뮤니티, 세상의 모든 즐거움</title>
+		<!--jquery-->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<!--swiper-->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+		/>
+		<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+		<!-- bottom sheet -->
+		<script src="js/bottomSheet.js"></script>
+		<script src="js/scrolling.js"></script>
+		<!--font-->
+		<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css"/>
+		<!--css-->
+	    <link rel="stylesheet" href="css/reset.css" />
+	    <link rel="stylesheet" href="css/main.css" />
+	    <link rel="stylesheet" href="css/sub.css" />
+	    <link rel="stylesheet" href="css/mob.css" />
+	</head>
+	<body>
+		<!--form controller -->
+		<div class="content-controller-container header">
+			<div class="content-controll">
+				<a class="cancel" href="#cancel">취소</a>
+				<button type="" class="btn-rd btn-rd-primary" disabled id="submitBtn">게시하기</button>				
+			</div>
+		</div>
+
+		<!--content-->
+		<div class="content-wrap content-wrap-flex">
+			<!-- head title -->
+			<div class="content-head">
+				<div class="content-head-tit">NewJeans 커뮤니티</div>
+			</div>
+
+			<!-- field  content -->
+			<div class="content-body">
+				<div class="input-field">
+					<input type="" name="" placeholder="제목을 입력해주세요." class="clearable-input vaild-field">
+					<div class="field-control">
+						<div class="field-btn clear-btn" aria-expanded="false"><i class="icon ic-close3"></i></div>
+					</div>
+				</div>
+				<ul class="edit-upload-controller scroll-trigger">
+					<li>
+						<a href="javascript:openModal('modal1');" class="upload-control"><i class="icon ic-img"></i> 이미지</a>
+					</li>
+					<li>
+						<a href="javascript:openModal('modal2');" class="upload-control"><i class="icon ic-video"></i> 동영상</a>
+					</li>
+					<li>
+						<a href="javascript:openModal('modal3');" class="upload-control"><i class="icon ic-youtube2"></i> 유튜브</a>
+					</li>
+					<li>
+						<a href="javascript:openModal('modal4');" class="upload-control"><i class="icon ic-survey"></i> 설문</a>
+					</li>
+				</ul>
+				<div class="editor-container">
+					<textarea placeholder="내용을 입력하세요" class="vaild-field"></textarea>
+				</div>
+			</div>
+		</div>
+
+        <!-- header script -->
+        <script type="text/javascript">
+        	/* 
+				header scrolling event = js/scrolling.js 참고,
+			*/
+        </script>
+
+        <!-- valid  -->
+        <script type="text/javascript">
+        	let valid_inp = document.querySelectorAll('.vaild-field');
+			let submitBtn = document.querySelector('#submitBtn');
+
+			valid_inp.forEach(function (target, index) {
+	            target.addEventListener("input", function (e) {    
+	            	validCheck = _valid(); // 입력값 유효성 체크     
+	            	if(validCheck){
+	            		submitBtn.removeAttribute('disabled'); // 버튼 활성화
+	            	} else {
+	            		submitBtn.setAttribute('disabled', 'disabled');  // 버튼 활성화
+	            	}
+	            });
+	        });
+
+	        function _valid(e){
+	        	let valid = true;
+	        	valid_inp.forEach(function (target, index) {
+		            if(valid){
+		            	valid = target.value ? true:false; 
+		            } else {
+		            	return false;
+		            }
+		        });
+		        return valid;
+	        }
+        </script>
+		<script type="text/javascript">
+			 //input clear
+			const inputFields = document.querySelectorAll(".clearable-input");
+			const clearButtons = document.querySelectorAll(".clear-btn");
+
+			inputFields.forEach(function (inputField, index) {
+				const clearButton = clearButtons[index];
+				// clear value
+				clearButton.addEventListener("click", function () {
+					inputField.value = "";
+					clearButton.setAttribute("aria-expanded", false);
+				});
+				// clear btn show, hide
+				inputField.addEventListener("input", function () {
+					if (inputField.value !== "") {
+						clearButton.setAttribute("aria-expanded", true);
+					} else {
+						clearButton.setAttribute("aria-expanded", false);
+					}
+				});
+			});
+
+		</script>
+	</body>
+</html>

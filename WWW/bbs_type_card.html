@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
+    <title>theVN｜다양한 커뮤니티, 세상의 모든 즐거움</title>
+    <!--jquery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!--swiper-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <!-- bottomsheet js -->
+    <script src="js/bottomSheet.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!--font-->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css"
+    />
+    <!--css-->
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/sub.css" />
+    <link rel="stylesheet" href="css/mob.css" />
+</head>
+<body>
+	<!-- 
+		feed-list-wrap li = border line,
+		그외 block 단위로 추가됩니다.
+	 -->
+	<div class="feed-list-wrap">
+      <ul>
+          <li>
+              <div class="notice-block">
+                  <div class="notice-head">
+                      <div class="notice-badge poll-badge">
+                          <span>Poll</span>
+                      </div>
+                      <div class="notice-tit">Người vợ Mỹ và tình yêu chó</div>
+                  </div>
+                  <div class="notice-meta-block">
+                      <div class="notice-meta-writer">
+                          <span>커뮤니티매니저닉네임</span>
+                      </div>
+                      <div class="notice-meta-view">
+                          <div class="meta">
+                              <i class="icon ic-comment"></i>
+                              <span>899</span>
+                          </div>
+                          <div class="meta">
+                               <i class="icon ic-connect"></i>
+                               <span>23.4k</span>
+                          </div>
+                          <div class="meta">
+                              <span class="timeline">10m</span>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </li>
+          <li>
+              <div class="notice-block">
+                  <div class="notice-head">
+                      <div class="notice-badge">
+                          <span>Note</span>
+                      </div>
+                      <div class="notice-tit">Người vợ Mỹ và tình yêu chó</div>
+                  </div>
+                  <div class="notice-meta-block">
+                      <div class="notice-meta-writer">
+                          <span>커뮤니티매니저닉네임</span>
+                      </div>
+                      <div class="notice-meta-view">
+                          <div class="meta">
+                              <i class="icon ic-comment"></i>
+                              <span>899</span>
+                          </div>
+                          <div class="meta">
+                               <i class="icon ic-connect"></i>
+                               <span>23.4k</span>
+                          </div>
+                          <div class="meta">
+                              <span class="timeline">10m</span>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </li>
+          <li>
+              <!-- feed block -->
+              <div class="feed-card-block">
+                  <!-- bbs meta -->
+                  <div class="writer-meta-block">
+                      <div class="meta-user">
+                          <span class="profile"><img src="img/icon/ic-my.png" alt="profile"></span>
+                          <span class="nickname">더비엔닉네임</span>
+                      </div>
+                      <div class="meta-commu">
+                          <a href="">커뮤니티 커뮤니티 커뮤니 뮤니티 커뮤니 뮤니티 커뮤니티 명</a>
+                      </div>
+                      <div class="meta-time">0s</div>
+                      <div class="meta-etc">
+                          <div class="more">
+                              <i class="icon ic-etc"></i>
+                              <div class="report-btn">
+                                  <i class="icon ic-report"></i>
+                                  신고하기
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <!-- subject -->
+                  <div class="feed-card-con">
+                      <a class="feed-card-tit" href="">
+                        <span>카드 리스트 + 이미지 썸네일입니다. 카드 리스트 + 이미지 썸네일입니다.</span>
+                      </a>
+                      <div class="feed-card-thumb">
+                          <!-- img  -->
+                          <img src="img/main/board-thumbnail.png" alt="board-thumbnail">
+                      </div>
+                  </div>
+                  <!-- 게시글 정보는 모두 공통입니다. -->
+                  <div class="bbs-meta-block mt10">
+                      <div class="meta">
+                          <p class="meta-hit">
+                              <i class="icon ic-hit3"></i>
+                              <span>23.5K</span>
+                          </p>
+                      </div>
+                      <div class="meta">
+                          <p class="meta-comment">
+                              <i class="icon ic-comment"></i>
+                              <span>3.3k</span>
+                          </p>
+                      </div>
+                      <div class="meta">
+                          <p class="meta-refresh">
+                              <i class="icon ic-refresh"></i>
+                              <span>9.9k</span>
+                          </p>
+                      </div>
+                      <div class="meta">
+                          <p class="meta-connect">
+                              <i class="icon ic-connect"></i>
+                              <span>23.4k</span>
+                          </p>
+                      </div>
+                  </div>
+              </div>
+              <!-- feed block // -->
+          </li>
+          <li>
+              <!-- feed block -->
+              <div class="feed-card-block">
+                  <!-- bbs meta -->
+                  <div class="writer-meta-block">
+                      <div class="meta-user">
+                          <span class="profile"><img src="img/icon/ic-my.png" alt="profile"></span>
+                          <span class="nickname">더비엔닉네임</span>
+                      </div>
+                      <div class="meta-commu">
+                          <a href="">커뮤니티 커뮤니티 커뮤니 뮤니티 커뮤니 뮤니티 커뮤니티 명</a>
+                      </div>
+                      <div class="meta-time">0s</div>
+                      <div class="meta-etc">
+                          <div class="more">
+                              <i class="icon ic-etc"></i>
+                              <div class="report-btn">
+                                  <i class="icon ic-report"></i>
+                                  신고하기
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <!-- subject -->
+                  <div class="feed-card-con">
+                      <a class="feed-card-tit" href="">
+                        <span>카드 리스트 + 영상 썸네일입니다. 카드 리스트 + 영상 썸네일입니다.</span>
+                      </a>
+                      <div class="feed-card-thumb">
+                          <!-- video -->
+                          <div class="video-wrap">
+                            <iframe
+                              src="https://www.youtube.com/embed/CcvAnlwxzKs&amp;controls=0"
+                              title="YouTube video player"
+                              frameborder="0"
+                              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                              allowfullscreen
+                            ></iframe>
+                          </div>
+                      </div>
+                  </div>
+                  <!-- 게시글 정보는 모두 공통입니다. -->
+                  <div class="bbs-meta-block mt10">
+                      <div class="meta">
+                          <p class="meta-hit">
+                              <i class="icon ic-hit3"></i>
+                              <span>23.5K</span>
+                          </p>
+                      </div>
+                      <div class="meta">
+                          <p class="meta-comment">
+                              <i class="icon ic-comment"></i>
+                              <span>3.3k</span>
+                          </p>
+                      </div>
+                      <div class="meta">
+                          <p class="meta-refresh">
+                              <i class="icon ic-refresh"></i>
+                              <span>9.9k</span>
+                          </p>
+                      </div>
+                      <div class="meta">
+                          <p class="meta-connect">
+                              <i class="icon ic-connect"></i>
+                              <span>23.4k</span>
+                          </p>
+                      </div>
+                  </div>
+              </div>
+              <!-- feed block // -->
+          </li>
+          <li>
+              <!-- feed block -->
+              <div class="feed-card-block">
+                  <!-- retwit -->
+                  <div class="meta-retweet">
+                      <img src="img/icon/ic-refresh2.svg" alt="refresh icon">
+                      <span>더비엔닉네임 님이 재 게시함. 2d</span>
+                  </div>
+                  <!-- bbs meta -->
+                  <div class="writer-meta-block">
+                      <div class="meta-user">
+                          <span class="profile"><img src="img/icon/ic-my.png" alt="profile"></span>
+                          <span class="nickname">더비엔닉네임</span>
+                      </div>
+                      <div class="meta-commu">
+                          <a href="">커뮤니티 커뮤니티 커뮤니 뮤니티 커뮤니 뮤니티 커뮤니티 명</a>
+                      </div>
+                      <div class="meta-time">0s</div>
+                      <div class="meta-etc">
+                          <div class="more">
+                              <i class="icon ic-etc"></i>
+                              <div class="report-btn">
+                                  <i class="icon ic-report"></i>
+                                  신고하기
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <!-- subject -->
+                  <div class="feed-card-con">
+                      <a class="feed-card-tit" href="">
+                        <span>카드 리스트 + retwit 메세지 추가 + 썸네일 없음</span>
+                      </a>
+                  </div>
+                  <!-- 게시글 정보는 모두 공통입니다. -->
+                  <div class="bbs-meta-block mt10">
+                      <div class="meta">
+                          <p class="meta-hit">
+                              <i class="icon ic-hit3"></i>
+                              <span>23.5K</span>
+                          </p>
+                      </div>
+                      <div class="meta">
+                          <p class="meta-comment">
+                              <i class="icon ic-comment"></i>
+                              <span>3.3k</span>
+                          </p>
+                      </div>
+                      <div class="meta">
+                          <p class="meta-refresh">
+                              <i class="icon ic-refresh"></i>
+                              <span>9.9k</span>
+                          </p>
+                      </div>
+                      <div class="meta">
+                          <p class="meta-connect">
+                              <i class="icon ic-connect"></i>
+                              <span>23.4k</span>
+                          </p>
+                      </div>
+                  </div>
+              </div>
+              <!-- feed block // -->
+          </li>
+          <li>
+              <!-- feed block -->
+              <div class="feed-card-block">
+                  <!-- bbs meta -->
+                  <div class="writer-meta-block">
+                      <div class="meta-user">
+                          <span class="profile"><img src="img/icon/ic-my.png" alt="profile"></span>
+                          <span class="nickname">더비엔닉네임</span>
+                      </div>
+                      <div class="meta-commu">
+                          <a href="">커뮤니티 커뮤니티 커뮤니 뮤니티 커뮤니 뮤니티 커뮤니티 명</a>
+                      </div>
+                      <div class="meta-time">0s</div>
+                      <div class="meta-etc">
+                          <div class="more">
+                              <i class="icon ic-etc"></i>
+                              <div class="report-btn">
+                                  <i class="icon ic-report"></i>
+                                  신고하기
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <!-- subject -->
+                  <div class="feed-card-con">
+                      <a class="feed-card-tit" href="">
+                        <span>카드 리스트 + 영상 및 이미지 슬라이드 + 페이징 + 번호매김</span>
+                      </a>
+                      <div class="feed-card-thumb">
+                         <div class="video-slide-container swiper-container" id="swiperID">
+                             <div class="swiper-wrapper">
+                                 <div class="swiper-slide">
+                                  <!-- 
+                                        이미지
+                                       <img src="img/main/board-thumbnail.png" alt="board-thumbnail">
+                                    -->
+                                    <!-- 영상 -->
+                                      <div class="video-wrap">
+                                          <iframe
+                                            src="https://www.youtube.com/embed/CcvAnlwxzKs&amp;controls=0"
+                                            title="YouTube video player"
+                                            frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen
+                                          ></iframe>
+                                      </div>
+                                      <!-- 영상 // -->
+                                 </div>
+                                 <div class="swiper-slide">
+                                      <div class="video-wrap">
+                                          <iframe
+                                            src="https://www.youtube.com/embed/CcvAnlwxzKs&amp;controls=0"
+                                            title="YouTube video player"
+                                            frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen
+                                          ></iframe>
+                                      </div>
+                                 </div>
+                                 <div class="swiper-slide">
+                                      <div class="video-wrap">
+                                          <iframe
+                                            src="https://www.youtube.com/embed/CcvAnlwxzKs&amp;controls=0"
+                                            title="YouTube video player"
+                                            frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen
+                                          ></iframe>
+                                      </div>
+                                 </div>
+                             </div>
+                             <div class="swiper-pagination"></div>
+                             <div class="swiper-number-count"></div>
+                         </div>
+                         <script type="text/javascript">
+                             //video slide
+                            const videoSlide = new Swiper("#swiperID", {
+                                observer: true,
+                                slidesPerView: 'auto',
+                                pagination: {
+                                    el: "#swiperID .swiper-pagination",
+                                    clickable: true,
+                                }, 
+                                on: {
+                                  afterInit: function () {
+                                      var numbers = document.querySelector('.swiper-number-count');
+                                      numbers.innerHTML = (this.realIndex +  1) + '/' + this.slides.length;
+                                      console.log(this.slides)
+                                  },
+                                  slideChange: function(){
+                                     var numbers = document.querySelector('.swiper-number-count');
+                                      numbers.innerHTML = (this.realIndex +  1) + '/' + this.slides.length;
+                                  },
+                                }      
+                            });
+                          </script>
+                      </div>
+                  </div>
+                  <!-- 게시글 정보는 모두 공통입니다. -->
+                  <div class="bbs-meta-block mt10">
+                      <div class="meta">
+                          <p class="meta-hit">
+                              <i class="icon ic-hit3"></i>
+                              <span>23.5K</span>
+                          </p>
+                      </div>
+                      <div class="meta">
+                          <p class="meta-comment">
+                              <i class="icon ic-comment"></i>
+                              <span>3.3k</span>
+                          </p>
+                      </div>
+                      <div class="meta">
+                          <p class="meta-refresh">
+                              <i class="icon ic-refresh"></i>
+                              <span>9.9k</span>
+                          </p>
+                      </div>
+                      <div class="meta">
+                          <p class="meta-connect">
+                              <i class="icon ic-connect"></i>
+                              <span>23.4k</span>
+                          </p>
+                      </div>
+                  </div>
+              </div>
+              <!-- feed block // -->
+          </li>
+      </ul>
+  </div>
+  <div class="pagination-area">
+        <a href="" class="btn-paging">
+             <span class="current">더보기 1</span>
+             <span class="total">/100</span>
+        </a>
+  </div>
+</body>
+</html>

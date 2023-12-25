@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+        <title>theVN｜다양한 커뮤니티, 세상의 모든 즐거움</title>
+        <!--jquery-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <!--swiper-->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+        />
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <!--font-->
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css"/>
+
+        <!-- bottomsheet js -->
+        <script src="js/bottomSheet.js"></script>
+        <!--css-->
+        <link rel="stylesheet" href="css/reset.css" />
+        <link rel="stylesheet" href="css/main.css" />
+        <link rel="stylesheet" href="css/sub.css" />
+        <link rel="stylesheet" href="css/mob.css" />
+    </head>
+    <body>
+        <!--header-->
+        <header class="header header-ver4">
+            <div class="header-bar">
+                <div class="inner">
+                    <div class="back-btn">
+                        <a href="#">
+                            <img src="img/icon/ic-back.svg" alt="back icon" />
+                        </a>
+                    </div>
+                    <h1 class="header-tit"></h1>
+                    <ul class="etc-btn"></ul>
+                </div>
+            </div>
+        </header>
+
+        <!--content-->
+        <div class="content-wrap content-wrap4">
+          
+        </div>
+
+        <!-- bottom sheet -->
+        <div class="bottomSheet-container" aria-hidden="true">
+            <div class="overlay"></div>
+            <div class="bottomSheet">
+                <div class="bs_head" aria-hidden="true">
+                    <div class="bs_dragable"></div>
+                    <div class="bs_header">
+                        <div class="search-input">
+                            <input type="search" name="" placeholder="Search">
+                        </div>
+                    </div>
+                </div>
+                <div class="bs_content">
+                    <div class="signup-induce">
+                        <div class="tit">가입하기</div>
+                        <div class="alert">가입하시면 plug의 <a hre="">개인정보정책</a> 및 <a hre="">이용약관</a> 에 동의하게 됩니다. </div>
+                        <ul class="singup-list">
+                            <li><a href=""><span>이메일로 가입하기</span></a></li>
+                            <li><a href=""><i class="icon ic-facebook"></i><span>Facebook</span></a></li>
+                            <li><a href=""><i class="icon ic-google"></i><span>Google</span></a></li>
+                            <li><a href=""><i class="icon ic-zalo"></i><span>Zalo</span></a></li>
+                        </ul>
+                        <div class="sigin-induce">
+                            <div class="text">이미 가입한 회원이라면?</div>
+                            <a href="" class="link">로그인</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- bottom sheet // -->
+    <script type="text/javascript">
+         // 바텀시트 - js/bottomSheet.js
+        var bottomSheet = new bottomSheetJS();
+
+        bottomSheet.open();
+    </script>
+    </body>
+</html

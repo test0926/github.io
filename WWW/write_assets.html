@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+		<title>theVN｜다양한 커뮤니티, 세상의 모든 즐거움</title>
+		<!--jquery-->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<!--swiper-->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+		/>
+		<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+		<!-- bottom sheet -->
+		<script src="js/bottomSheet.js"></script>
+		<script src="js/scrolling.js"></script>
+		<!--font-->
+		<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css"/>
+		<!--css-->
+	    <link rel="stylesheet" href="css/reset.css" />
+	    <link rel="stylesheet" href="css/main.css" />
+	    <link rel="stylesheet" href="css/sub.css" />
+	    <link rel="stylesheet" href="css/mob.css" />
+	</head>
+	<body>
+		<!--form controller -->
+		<div class="content-controller-container header">
+			<div class="content-controll">
+				<a class="cancel" href="#cancel">취소</a>
+				<button type="" class="btn-rd btn-rd-primary" disabled id="submitBtn">게시하기</button>				
+			</div>
+		</div>
+
+		<!--content-->
+		<div class="content-wrap content-wrap-flex">
+			<!-- head title -->
+			<div class="content-head">
+				<div class="content-head-tit">NewJeans 커뮤니티</div>
+			</div>
+
+			<!-- field  content -->
+			<div class="content-body">
+				<!-- 카테고리 -->
+				<div class="category-selector-wrap" aria-expanded="true">
+					<div class="category-slide-container swiper-container">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<div class="checkbox category-checkbox">
+									<input type="radio" name="category" checked>
+									<label>말머리1</label>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="checkbox category-checkbox">
+									<input type="radio" name="category">
+									<label>말머리 11</label>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="checkbox category-checkbox">
+									<input type="radio" name="category">
+									<label>말머리 1222</label>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="checkbox category-checkbox">
+									<input type="radio" name="category">
+									<label>말머리 ddddddddd1</label>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="checkbox category-checkbox">
+									<input type="radio" name="category">
+									<label>말머리 155</label>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="checkbox category-checkbox">
+									<input type="radio" name="category">
+									<label>말머리1</label>
+								</div>
+							</div>
+						</div>
+					</div>
+					<script type="text/javascript">
+						//말머리
+						const selectheadSwiper = new Swiper(".category-slide-container", {
+							observer: true,
+							observeParents: true,
+							slidesPerView: "auto",
+							slideToClickedSlide: true,
+							freeMode: true,
+						});
+					</script>
+				</div>
+
+				<!-- 게시글 타입 -->
+				<div class="bbstype-selector-wrap">
+					<div class="bbstype-slide-container swiper-container">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<div class="checkbox check-type-02">
+									<input type="radio" name="bbstype">
+									<label>공지</label>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="checkbox check-type-02">
+									<input type="radio" name="bbstype">
+									<label>설문</label>
+								</div>
+							</div>
+						</div>
+					</div>
+					<script type="text/javascript">
+						// bbs type
+						const bbstypeSwiper = new Swiper(".bbstype-slide-container", {
+							observer: true,
+							observeParents: true,
+							slidesPerView: "auto",
+							slideToClickedSlide: true,
+							freeMode: true,
+						});
+					</script>
+				</div>
+
+				<!-- 바텀시트 선택 -->
+				<div class="select-field">
+					<input type="text" class="vaild-field selectable-input" data-select-type="goods" placeholder="선택" readonly/>
+				</div>
+
+				<!-- 입력  -->
+				<div class="input-field">
+					<input type="" name="" placeholder="제목을 입력해주세요." class="clearable-input vaild-field">
+					<div class="field-control">
+						<div class="field-btn clear-btn" aria-expanded="false"><i class="icon ic-close3"></i></div>
+					</div>
+				</div>
+
+				<ul class="edit-upload-controller scroll-trigger">
+					<li>
+						<a href="javascript:openModal('modal1');" class="upload-control"><i class="icon ic-img"></i> 이미지</a>
+					</li>
+					<li>
+						<a href="javascript:openModal('modal2');" class="upload-control"><i class="icon ic-video"></i> 동영상</a>
+					</li>
+					<li>
+						<a href="javascript:openModal('modal3');" class="upload-control"><i class="icon ic-youtube2"></i> 유튜브</a>
+					</li>
+					<li>
+						<a href="javascript:openModal('modal4');" class="upload-control"><i class="icon ic-survey"></i> 설문</a>
+					</li>
+				</ul>
+				<div class="editor-container">
+					<textarea placeholder="내용을 입력하세요" class="vaild-field"></textarea>
+				</div>
+			</div>
+		</div>
+
+		<!-- bottom sheet -->
+        <div class="bottomSheet-container" aria-hidden="true">
+            <div class="overlay"></div>
+            <div class="bottomSheet">
+                <div class="bs_head">
+                    <div class="bs_dragable"></div>
+                    <div class="bs_header">
+                    	<div class="search-input">
+	                        <input type="search" name="" placeholder="Search">
+	                    </div>
+                    </div>
+                </div>
+                <div class="bs_content">
+                    <ul class="selector-wrap">
+                    	<li class="selector-group">
+                    		<div class="select-tit">운영 커뮤니티</div>
+                    		<ul class="select-option">
+                    			<li><span class="option">커뮤니티 1</span></li>
+                    			<li><span class="option">커뮤니티 2</span></li>
+                    		</ul>
+                    	</li>
+                    	<li class="selector-group">
+                    		<div class="select-tit">가입 중</div>
+                    		<ul class="select-option">
+                    			<li><span class="option">커뮤니티 1</span></li>
+                    			<li><span class="option">커뮤니티 2</span></li>
+                    		</ul>
+                    	</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- header script -->
+        <script type="text/javascript">
+        	/* 
+				header scrolling event = js/scrolling.js 참고,
+			*/
+        </script>
+		<script type="text/javascript">
+
+			let valid_inp = document.querySelectorAll('.vaild-field'); // valid inputs 
+			let submitBtn = document.querySelector('#submitBtn'); // submit button
+
+			// 유효성 검사
+	        function _valid(e){
+	        	let valid = true;
+	        	valid_inp.forEach(function (target, index) {
+		            if(valid){
+		            	valid = target.value ? true:false; 
+		            } else {
+		            	return false;
+		            }
+		        });
+
+		        if(valid){
+            		submitBtn.removeAttribute('disabled'); // 버튼 활성화
+            	} else {
+            		submitBtn.setAttribute('disabled', 'disabled');  // 버튼 활성화
+            	}
+	        }
+
+	        // bind event
+	        valid_inp.forEach(function (target, index) {
+	            target.addEventListener("input", _valid);
+	        });
+
+	        // bottomSheet
+	        var bottomSheet = new bottomSheetJS();
+
+			 //selectable = bottom sheet open
+	        const selector = document.querySelector('.selectable-input');
+            selector.addEventListener("click", function (e) {
+            	bottomSheet.open();
+	        });
+
+	        // bottom sheet option
+	        const selectorOption = document.querySelectorAll('.select-option .option');
+	        const category = document.querySelector('.category-selecotor-wrap');
+	        selectorOption.forEach(function (target, index) {
+	            target.addEventListener("click", function (e) {
+	                value = target.innerText;
+	            	setValue(value);
+	            });
+	        });
+
+	        // option selected - selector value change
+	        function setValue(value){
+                selector.value = value; // value push
+                bottomSheet.close(); // bottom sheet close 
+                valid(e); // valid check
+	        }
+
+			 //input clear
+			const inputFields = document.querySelectorAll(".clearable-input");
+			const clearButtons = document.querySelectorAll(".clear-btn");
+
+			inputFields.forEach(function (inputField, index) {
+				const clearButton = clearButtons[index];
+				// clear value
+				clearButton.addEventListener("click", function () {
+					inputField.value = "";
+					clearButton.setAttribute("aria-expanded", false);
+				});
+				// clear btn show, hide
+				inputField.addEventListener("input", function () {
+					if (inputField.value !== "") {
+						clearButton.setAttribute("aria-expanded", true);
+					} else {
+						clearButton.setAttribute("aria-expanded", false);
+					}
+				});
+			});
+
+		</script>
+	</body>
+</html>

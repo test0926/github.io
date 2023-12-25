@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+        <title>theVN｜다양한 커뮤니티, 세상의 모든 즐거움</title>
+        <!--jquery-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <!--swiper-->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+        />
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <!--font-->
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css"/>
+
+        <script src="js/bottomSheet.js"></script>
+        <!--css-->
+        <link rel="stylesheet" href="css/reset.css" />
+        <link rel="stylesheet" href="css/main.css" />
+        <link rel="stylesheet" href="css/sub.css" />
+        <link rel="stylesheet" href="css/mob.css" />
+    </head>
+    <body>
+        <!--header-->
+        <header class="header header-ver4">
+            <div class="header-bar">
+                <div class="inner">
+                    <div class="back-btn">
+                        <a href="#">
+                            <i class="icon ic-back"></i>
+                        </a>
+                    </div>
+                    <h1 class="header-tit">component</h1>
+                    <ul class="etc-btn"></ul>
+                </div>
+            </div>
+        </header>
+
+        <!--content-->
+         <style type="text/css">
+            .column { display: flex; justify-content: flex-start; align-items: stretch; flex-direction: column; }
+            .column .row { flex-shrink: ; margin-bottom: 20px; }
+            .column .row h1 { font-size: 16px; font-weight: 700; margin-bottom: 8px; }
+            .column .row h2 { font-size: 14px; font-weight: 700; margin-bottom: 5px; }
+            .column .col { display: flex; justify-content: flex-start; align-items: flex-start; flex-wrap: wrap; gap: 8px; }
+            .column .col-row { display: flex; justify-content: flex-start; align-items: stretch; flex-direction: column; gap: 8px; }
+            .col-row + .col-row { margin-top: 8px; }
+            .col > .icon { font-size: 12px; }
+            .class { color: #0ac900; }
+            .icon-list { display: flex; justify-content: flex-start; align-items: flex-start; flex-wrap: wrap; padding: 12px; border: 1px solid #ddd; border-radius: 4px; background: #f1f1f1; gap: 8px; }
+            .icon-list .icon { font-size: 20px; }
+            .ml-auto { margin-left: auto; margin-right: 0; }
+            .mt-auto { margin-top: auto; margin-bottom: 0; }
+            .mt05 { margin-top: 5px; }
+            .mt10 { margin-top: 10px; }
+            .mt15 { margin-top: 15px; }
+            .mt20 { margin-top: 20px; }
+            .mt25 { margin-top: 25px; }
+            .mt30 { margin-top: 30px; }
+            .mt35 { margin-top: 35px; }
+
+
+            .field-area { position: relative; }
+            .field-area:focus-within {  }
+            .field-area:focus-within .field-label { color: var(--color-primary); }
+            .field-label {  }
+            .field-input {  }
+            ol li { list-style: auto; margin-left: 12px; line-height: 1.5em; }
+            ol li + li { margin-top: 5px; }
+            .guide { background: #eee; border: 1px solid #ddd; border-radius: 4px; padding: 12px; margin-bottom: 10px; font-size: 12px; }
+            .danger { background: #ffd9d9; border: 1px solid #ffa2a2; border-radius: 4px; padding: 12px; margin-bottom: 10px; font-size: 12px; }
+        </style>
+        <div class="content-wrap content-wrap4">
+            <div class="column inner">
+                <div class="danger">
+                    <ol>
+                        <li>
+                            일부 확장 또는 숨김 요소들은<br>
+                            "aria-expanded="false or true"<br>
+                            "aria-hidden="false  or true"<br> 
+                            속성에 의해 변경됩니다.
+                        </li>
+                        <li>
+                            해당 속성을 추가하더라도 css 속성이 없는 경우<br>
+                            상태가 변경되지 않습니다.
+                        </li>
+                        <li>해당 속성들은 직접 변경해야 합니다.</li>
+                        <li>기존 요소들은 적용받지 않습니다.</li>
+                    </ol>
+                </div>
+                <!-- input -->
+                <div class="row">
+                    <h1>입력</h1>
+                    <div class="danger">
+                        <ol>
+                            <li>기존 입력창과 호환되지 않습니다.</li>
+                        </ol>
+                    </div>
+                    <div class="row">
+                        <div class="col-row">
+                            <div class="input-field">
+                                <input type="" name="" placeholder="인풋">
+                            </div>
+                        </div>
+                        <div class="col-row">
+                            <div class="input-field">
+                                <input type="" name="" placeholder="버튼이 있는 인풋" class="clearable-input">
+                                <div class="field-control">
+                                    <div class="field-btn clear-btn" aria-expanded="false"><i class="icon ic-close3"></i></div>
+                                </div>
+                            </div>
+                            <script type="text/javascript">
+                                 //input clear
+                                const inputFields = document.querySelectorAll(".clearable-input");
+                                const clearButtons = document.querySelectorAll(".clear-btn");
+
+                                inputFields.forEach(function (inputField, index) {
+                                    const clearButton = clearButtons[index];
+                                    // clear value
+                                    clearButton.addEventListener("click", function () {
+                                        inputField.value = "";
+                                        clearButton.setAttribute("aria-expanded", false);
+                                    });
+                                    // clear btn show, hide
+                                    inputField.addEventListener("input", function () {
+                                        if (inputField.value !== "") {
+                                            clearButton.setAttribute("aria-expanded", true);
+                                        } else {
+                                            clearButton.setAttribute("aria-expanded", false);
+                                        }
+                                    });
+                                });
+                            </script>
+                        </div>
+                        <div class="col-row">
+                            <div class="input-field">
+                                <input type="" name="" placeholder="입력 카운트" id="countInput" maxlength="25">
+                                <div class="field-control">
+                                    <div class="bit"><span class="current" id="counter">0</span>/25</div>
+                                </div>
+                            </div>
+                            <script type="text/javascript">
+                                 // input count
+                                const commnetInp = document.querySelector('#countInput');
+                                const counter = document.querySelector('#counter');
+                                commnetInp.addEventListener('keyup', countText);
+
+                                function countText(e){
+                                    max = parseInt(e.target.getAttribute('maxlength'));
+                                    leng = e.target.value.length;
+                                    counter.innerHTML = leng;
+
+                                    if(leng > max) counter.innerHTML = max;
+                                    else counter.innerHTML = leng;
+                                }
+                            </script>
+                        </div>
+                        <div class="col-row">
+                            <div class="select-field">
+                                <input type="" name="" placeholder="셀렉터 - 입력 수정 불가능 (읽기전용 속성)" readonly class="selectalbe-input">
+                            </div>
+                            <script type="text/javascript">
+                                $( function(){
+                                    // 바텀시트
+                                    var bottomSheet = new bottomSheetJS('.bottomSheet-container');
+
+                                    //selectable - bottom sheet 
+                                    const selector = document.querySelector('.selectalbe-input');
+                                    selector.addEventListener("click", function (e) {
+                                        bottomSheet.open();
+                                    });                               
+
+                                    // bottom sheet option
+                                    const selectorOption = document.querySelectorAll('.selector-wrap .option');
+                                    selectorOption.forEach(function (target, index) {
+                                        target.addEventListener("click", function (e) {
+                                            option = target.innerText;
+                                            selector.value = option;
+                                            bottomSheet.close();
+                                        });
+                                    });
+                                })
+                            </script>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- slide -->
+                <div class="row">
+                    <h1>슬라이드 탭</h1>
+                    <div class="guide">
+                        <ol>
+                            <li>swiper js library 가 사용됩니다.</li>
+                        </ol>
+                    </div>
+                    <div class="danger">
+                        <ol>
+                            <li>링크 이동 후 선택된 탭으로 이동하기 위해서는 swiper.slideTo(index) 를 호출해야합니다. </li>
+                        </ol>
+                    </div>
+                    <div class="row">
+                        <div class="col-row">
+                            <div class="category-selector-wrap" aria-expanded="true">
+                                <div class="category-slide-container swiper-container">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <div class="checkbox category-checkbox">
+                                                <input type="radio" name="category" checked>
+                                                <label>말머리1</label>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="checkbox category-checkbox">
+                                                <input type="radio" name="category">
+                                                <label>말머리 11</label>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="checkbox category-checkbox">
+                                                <input type="radio" name="category">
+                                                <label>말머리 1222</label>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="checkbox category-checkbox">
+                                                <input type="radio" name="category">
+                                                <label>말머리 ddddddddd1</label>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="checkbox category-checkbox">
+                                                <input type="radio" name="category">
+                                                <label>말머리 155</label>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="checkbox category-checkbox">
+                                                <input type="radio" name="category">
+                                                <label>말머리1</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <script type="text/javascript">
+                                    //말머리
+                                    const selectheadSwiper = new Swiper(".category-slide-container", {
+                                        observer: true,
+                                        observeParents: true,
+                                        slidesPerView: "auto",
+                                        slideToClickedSlide: true,
+                                        freeMode: true,
+                                    });
+                                </script>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-row">
+                            <div class="content-tab-wrap">
+                                <div class="swiper-container tab-slide-container">
+                                    <ul class="swiper-wrapper content-tab">
+                                        <li class="swiper-slide"><a href=""><span>게시글</span></a></li>
+                                        <li class="swiper-slide"><a href=""><span>중고거래</span></a></li>
+                                        <li class="swiper-slide"><a href=""><span>댓글</span></a></li>
+                                        <li class="swiper-slide"><a href=""><span>받은메세지</span></a></li>
+                                        <li class="swiper-slide"><a href="" class="active"><span>보낸메세지</span></a></li>
+                                        <li class="swiper-slide"><a href=""><span>스크랩</span></a></li>
+                                    </ul>
+                                </div>
+                                <script type="text/javascript">
+                                    //탭
+                                    const tabSwiper = new Swiper(".tab-slide-container", {
+                                        observer: true,
+                                        observeParents: true,
+                                        slidesPerView: "auto",
+                                        slideToClickedSlide: true,
+                                        freeMode: true,
+                                    });
+                                    tabSwiper.slideTo(5);
+                                </script>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- slide -->
+
+                <!-- tab -->
+                <div class="row">
+                    <h1>탭</h1>
+                    <div class="guide">
+                        <ol>
+                            <li>기본적으로 활성화는 클래스명 active 입니다.</li>
+                        </ol>
+                    </div>
+                    <div class="danger">
+                        <ol>
+                            <li>활성화 상태의 누락된 아이콘이 있습니다.</li>
+                        </ol>
+                    </div>
+                    <div class="row">
+                        <div class="col-row">
+                            <ul class="content-tab">
+                                <li class="active"><a href=""><i class="icon ic-best-b"></i> <span>아이콘</span></a></li>
+                                <li><a href=""><i class="icon ic-best-b"></i> <span>아이콘</span></a></li>
+                                <li><a href=""><i class="icon ic-best-b"></i> <span>아이콘</span></a></li>
+                            </ul>
+                        </div>
+                        <div class="col-row">
+                            <ul class="content-tab">
+                                <li class="active"><a href=""><span>판매중</span><span class="primary">999</span></a></li>
+                                <li><a href=""><span>판매중</span><span class="primary">999</span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- tab // -->
+
+                <!-- meta -->
+                <div class="row">
+                    <h1>meta & panel</h1>
+                    <div class="guide">
+                        <ol>
+                            <li>각 요소들은 게시글 타입에 상관 없이 추가, 제거 할 수 있습니다.</li>
+                        </ol>
+                    </div>
+                    <div class="danger">
+                        <ol>
+                            <li>이전 작업물에 추가할 경우 문제가 발생 할 수 있습니다.</li>
+                        </ol>
+                    </div>
+                    <div class="row">
+                        <div class="col-row">
+                            <div class="writer-meta-block">
+                                <div class="meta-user">
+                                    <span class="profile"><img src="img/icon/ic-my.png" alt="profile"></span>
+                                    <span class="nickname">더비엔닉네임</span>
+                                </div>
+                                <div class="meta-commu">
+                                    <a href="">커뮤니티 커뮤니티 커뮤니 뮤니티 커뮤니 뮤니티 커뮤니티 명</a>
+                                </div>
+                                <div class="meta-time">0s</div>
+
+                                <div class="meta-etc">
+                                    <div class="more">
+                                        <i class="icon ic-etc"></i>
+                                        <div class="report-btn">
+                                            <i class="icon ic-report"></i>
+                                            신고하기
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-row">
+                            <div class="writer-meta-block">
+                                  <div class="meta-user">
+                                      <span class="profile"><img src="img/icon/ic-my.png" alt="profile"></span>
+                                      <span class="nickname">더비엔닉네임</span>
+                                  </div>
+                                  <div class="meta-time">0s</div>
+                                  <div class="meta-etc">
+                                      <div><i class="icon ic-block-from"></i></div>
+                                      <div><i class="icon ic-block-to"></i></div>
+                                      <div class="more">
+                                          <i class="icon ic-etc"></i>
+                                          <div class="report-btn">
+                                              <i class="icon ic-report"></i>
+                                              신고하기
+                                          </div>
+                                      </div>
+                                  </div>
+                            </div>
+                        </div>
+                        <div class="col-row">
+                            <div class="meta-retweet">
+                                <img src="img/icon/ic-refresh2.svg" alt="refresh icon">
+                                <span>더비엔닉네임 님이 재 게시함. 2d</span>
+                            </div>
+                        </div>
+                        <div class="col-row">
+                            <div class="bbs-meta-block">
+                                <div class="meta">
+                                    <p class="meta-hit">
+                                        <i class="icon ic-hit3"></i>
+                                        <span>23.5K</span>
+                                    </p>
+                                </div>
+                                <div class="meta">
+                                    <p class="meta-comment">
+                                        <i class="icon ic-comment"></i>
+                                        <span>3.3k</span>
+                                    </p>
+                                </div>
+                                <div class="meta">
+                                    <p class="meta-refresh">
+                                        <i class="icon ic-refresh"></i>
+                                        <span>9.9k</span>
+                                    </p>
+                                </div>
+                                <div class="meta">
+                                    <p class="meta-connect">
+                                        <i class="icon ic-connect"></i>
+                                        <span>23.4k</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-row">
+                            <div class="bbs-meta-block">
+                                <div class="meta">
+                                    <p class="meta-hit">
+                                        <i class="icon ic-hit3-b"></i>
+                                        <span>23.5K</span>
+                                    </p>
+                                </div>
+                                <div class="meta">
+                                    <p class="meta-comment">
+                                        <i class="icon ic-comment"></i>
+                                        <span>3.3k</span>
+                                    </p>
+                                </div>
+                                <div class="meta">
+                                    <p class="meta-refresh">
+                                        <i class="icon ic-refresh-b"></i>
+                                        <span>9.9k</span>
+                                    </p>
+                                </div>
+                                <div class="meta">
+                                    <p class="meta-connect">
+                                        <i class="icon ic-connect-b"></i>
+                                        <span>23.4k</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-row">
+                            <div class="profile-meta-block">
+                                <div>
+                                    <div class="meta meta-type01">
+                                        <span>00.0k</span>
+                                        <span class="unit">팔로워</span>
+                                    </div>
+                                    <div class="meta meta-type01">
+                                        <span>00.0k</span>
+                                        <span class="unit">팔로워</span>
+                                    </div>
+                                </div>
+                                <div class="flex-right">
+                                    <div class="meta meta-type02">
+                                        <span>24/12/2023</span>
+                                        <span class="unit">가입</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-row">
+                            <div class="controll-panel">
+                                <div class="panel">
+                                    <i class="icon ic-report"></i>
+                                    <span>신고하기</span>
+                                </div>
+                                <div class="panel">
+                                    <i class="icon ic-refresh"></i>
+                                    <span>재 게시</span>
+                                </div>
+                                <div class="panel">
+                                    <i class="icon ic-bookmark"></i>
+                                    <span>스크랩</span>
+                                </div>
+                                <div class="panel">
+                                    <i class="icon ic-share2"></i>
+                                    <span>공유</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- meta // -->
+            </div>
+        </div>
+
+        <!-- 바텀시트 -->
+        <div class="bottomSheet-container" aria-hidden="true">
+            <div class="overlay"></div>
+            <div class="bottomSheet">
+                 <div class="bs_head">
+                    <div class="bs_dragable"></div>
+                    <div class="bs_header">
+                        <div class="search-input">
+                            <input type="search" name="" placeholder="Search">
+                        </div>
+                    </div>
+                </div>
+                <div class="bs_content">
+                    <!-- option -->
+                    <div class="selector-wrap">
+                        <ul class="select-option">
+                            <li class="option"><i class="icon ic-sort-card"></i><span class="option">Card</span></li>
+                            <li class="option"><i class="icon ic-sort-classic"></i><span class="option">Classic</span></li>
+                            <li class="option"><i class="icon ic-sort-compact"></i><span class="option">Compact</span></li>
+                        </ul>
+                    </div>
+                    <!-- option // -->
+                </div>
+            </div>
+        </div>
+        <!--바텀시트//  -->
+    </body>
+</html>
