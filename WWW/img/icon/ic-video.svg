@@ -1,0 +1,21 @@
+<svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="path-1-inside-1_99_49219" fill="white">
+<rect x="1" y="3.91016" width="18" height="13" rx="0.5"/>
+</mask>
+<rect x="1" y="3.91016" width="18" height="13" rx="0.5" stroke="#333333" stroke-width="3" mask="url(#path-1-inside-1_99_49219)"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M1.50562 4.91016H4V16.9102H1.50562V4.91016Z" fill="#333333"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M16.0063 4.91016H18.4487V16.9102H16.0063V4.91016Z" fill="#333333"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M12.7692 10.1509C12.9676 10.2667 12.9676 10.5534 12.7691 10.6692L8.35025 13.2469C8.15026 13.3635 7.89909 13.2193 7.89909 12.9877L7.89909 7.83237C7.89909 7.60083 8.15026 7.45657 8.35025 7.57324L12.7692 10.1509Z" fill="#333333"/>
+<rect x="2" y="6.91016" width="1" height="1" fill="white"/>
+<rect x="17" y="6.91016" width="1" height="1" fill="white"/>
+<rect x="2" y="8.91016" width="1" height="1" fill="white"/>
+<rect x="17" y="8.91016" width="1" height="1" fill="white"/>
+<rect x="2" y="10.9102" width="1" height="1" fill="white"/>
+<rect x="17" y="10.9102" width="1" height="1" fill="white"/>
+<rect x="2" y="12.9102" width="1" height="1" fill="white"/>
+<rect x="17" y="12.9102" width="1" height="1" fill="white"/>
+<rect x="2" y="14.9102" width="1" height="1" fill="white"/>
+<rect x="17" y="14.9102" width="1" height="1" fill="white"/>
+<rect x="2" y="4.91016" width="1" height="1" fill="white"/>
+<rect x="17" y="4.91016" width="1" height="1" fill="white"/>
+</svg>
